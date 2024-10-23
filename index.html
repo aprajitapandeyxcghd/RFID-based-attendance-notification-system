@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: Sign Up/Sign In -->
+    <div id="page1" class="page">
+        <button class="green-button" onclick="redirectToPage2()">Sign Up / Sign into the Attendance Portal</button>
+    </div>
+
+    <!-- Page 2: Attendance Input -->
+    <div id="page2" class="page" style="display: none;">
+        <input type="text" id="name" class="input-box" placeholder="Enter name">
+        <input type="text" id="ward" class="input-box" placeholder="Enter ward name">
+        <button class="blue-button" onclick="redirectToBlankPage()">Check Attendance</button>
+    </div>
+
+    <!-- Page 3: Blank Page -->
+    <div id="blankPage" class="page" style="display: none;">
+        
+    </div>
+
+    <script>
+        function redirectToPage2() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        }
+
+        function redirectToBlankPage() {
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('blankPage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
